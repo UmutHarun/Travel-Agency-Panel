@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\web\about.html" />
-    <None Include="wwwroot\web\contact.html" />
     <None Include="wwwroot\web\css\slider.css" />
     <None Include="wwwroot\web\css\style.css" />
-    <None Include="wwwroot\web\destinations.html" />
     <None Include="wwwroot\web\images\about_banner.jpg" />
     <None Include="wwwroot\web\images\arrows.png" />
     <None Include="wwwroot\web\images\but.png" />
@@ -42,7 +39,6 @@
     <None Include="wwwroot\web\images\pic7.jpg" />
     <None Include="wwwroot\web\images\pic8.jpg" />
     <None Include="wwwroot\web\images\pic9.jpg" />
-    <None Include="wwwroot\web\index.html" />
     <None Include="wwwroot\web\js\jquery.min.js" />
     <None Include="wwwroot\web\js\responsiveslides.min.js" />
     <None Include="wwwroot\web\w3layouts-License.txt" />
@@ -55,6 +51,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\weblogin\css\" />
   </ItemGroup>
 
 </Project>
