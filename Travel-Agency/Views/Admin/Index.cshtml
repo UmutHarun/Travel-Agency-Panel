@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div style="margin-top:20px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <th>@x.Id</th>
+                        <th>@x.Title</th>
+                        <th><a class="btn btn-danger" href="/Admin/DeleteBlog/@x.Id">Delete</a></th>
+                        <th><a class="btn btn-warning" href="/Admin/EditBlog/@x.Id">Edit</a></th>
+                        <th><a class="btn btn-primary" href="">Details</a></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a class="btn btn-success" href="/Admin/NewBlog">Add New Blog</a>
+    </div>
+</div>
+

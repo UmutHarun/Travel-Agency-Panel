@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+<link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+<script src="~/web/js/jquery.min.js"></script>
+<script src="~/web/js/responsiveslides.min.js"></script>
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+                onclick="w3_close()">
+            Close &times;
+        </button>
+        <a href="/Admin/Index" class="w3-bar-item w3-button">Blogs</a>
+        <a href="#" class="w3-bar-item w3-button">Comments</a>
+        <a href="#" class="w3-bar-item w3-button">Contact</a>
+        <a href="#" class="w3-bar-item w3-button">About</a>
+        <a href="~/Home/Index" class="w3-bar-item w3-button">Go to website</a>
+    </div>
+
+    <div id="main">
+
+        <div class="w3-teal">
+            <div style="display:flex;justify-content:start">
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <h1 style="margin: 0.75% 0 0 10px; font-size:23px">Admin</h1>
+            </div>
+        </div>
+
+        @RenderBody()
+
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "15%";
+            document.getElementById("mySidebar").style.width = "15%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+</body>
+</html>

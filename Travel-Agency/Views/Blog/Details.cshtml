@@ -1,0 +1,38 @@
+﻿@model Travel_Agency.Models.Blog
+@{
+	Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+
+<div class="col-md-8 single-main">
+	<div class="single-grid">
+		<h1 style="font-weight:700; font-size: 40px; margin-bottom: 20px; margin-top:30px;">@Model.Title</h1>
+		<img class="w-100" style="height: 400px;" src="@Model.BlogImageUrl" alt="" />
+		<p>
+			@Model.Description
+		</p>
+		<div class="mt-3 mb-3">
+			<div>
+				<div style="display:flex; justify-content:end;">
+					<span class="float-end text-muted">@Model.Date.ToString("d")</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h1 style="font-weight:700; font-size:27px; padding-top:12px;">Comments</h1>
+
+	<ul class="comment-list">
+		@foreach(var c in ViewBag.Comments)
+		{
+			<h4 class="post-author_head" style="font-size:18px; font-weight:600; margin-bottom:5px; padding-top:15px;"><a href="#" title="Posts by admin" rel="author">@c.Username</a></h4>
+			<li style="padding-bottom:20px">
+				@*<img src="images/avatar.png" class="img-responsive" alt="">*@
+				<div class="desc">
+					@c.CommentI
+				</div>
+				<div class="clearfix"></div>
+			</li>
+		}
+	</ul>
+	@Html.Partial("AddComment", Model)
+</div>
